@@ -24,7 +24,7 @@ contract Transactions {
 
     TransferStruct[] transactions;
     
-    function addToBlockchain(address payable receiver, uint amount, bool theWinStatus, string memory betChoice) public 
+    function addToBlockchain(address payable receiver, uint amount, bool theWinStatus, string memory betChoice) public payable
     {
         transactionCount += 1;
         transactions.push(TransferStruct(msg.sender, receiver, amount, theWinStatus, betChoice, block.timestamp));
